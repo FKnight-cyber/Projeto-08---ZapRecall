@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FB6B6B;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y: scroll;
+}
+
+li{
+    margin-bottom: 25px;
+}
+
+:disabled,.pergunta{
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 300px;
+    height: 65px;
+
+    background-color: #ffffff;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+header > img{
+    margin-bottom: 13px;
+    width: 52px;
+    height: 60px;
+}
+
+.login{
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > img{
+    object-fit: cover;
+    width: 136px;
+    height: 161px;
+}
+
+h1{
+    font-size: 36px;
+    color:#ffffff;
+}
+
+h2{
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+h3{
+    font-size: 18px;
+    color:#333333;
+}
+
+.login > button{
+    font-size: 18px;
+    margin-top: 10%;
+    width: 246px;
+    height: 54px;
+    background-color: #ffffff;
+    color: #D70900;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+    position: fixed;
+
+    bottom:0;
+    width:100%;
+    height: 70px;
+}
+
+.espaço{
+    height: 70px;
+}
+
+.caixa-de-resposta{
+    position: relative;
+    padding: 18px;
+    width: 299px;
+    height: 131px;
+    background-color: #FFFFD5;
+}
+
+.setinha{
+    width: 30px;
+    height: 20px;
+    position: absolute;
+
+    right:10px;
+    bottom: 0;
+}
+
+.opcoes{
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+
+    width: 260px;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    bottom: 0;
+}
+
+.op1,.op2,.op3{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 38px;
+    text-align: center;
+    background-color: #FF3030;
+    margin-right: 8px;
+    color: #ffffff;
+}
+.op2{
+    background-color: #FF922E;
+}
+.op3{
+    background-color: #2FBE34;
+    margin-right: 0px;
+}
+
+ion-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.errado{
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.quase{
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.certo{
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
