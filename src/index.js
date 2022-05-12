@@ -1,24 +1,23 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import Questions from "./components/Questions";
-import logo from "./assets/images/logo.png"
+import Login from "./components/Login";
+import Footer from "./components/Footer";
 import logo2 from "./assets/images/logo-pequeno.png"
+import Win from "./components/Win";
+import Fail from "./components/Fail";
+
 
 function App(){
-
-    const arr = [];
-    
     const [start,setStart] = React.useState('login');
     const [display2,setDisplay2] = React.useState('hidden');
+    const [arrIcons,setArrIcons] = React.useState([]);
+    const [resultWin,setResultWin] = React.useState('');
+    const [resultFail,setResultFail] = React.useState('');
 
     return(
         <>
-             <div className={start}>
-                <img className='logo-img' src={logo} alt=""></img>
-                <h1>ZapRecall</h1>
-                <button onClick={() => {setStart('login hidden');setDisplay2(' ')}}>Iniciar Recall!</button>
-            </div>
-
+            <Login start={start} setStart={setStart} setDisplay2={setDisplay2}/>
             <div className={display2}>
                 <header >
                     <img src={logo2} alt=""></img>
@@ -27,16 +26,17 @@ function App(){
 
                 <content>
                     <ul>
-                        <Questions />
+                        <Questions setArrIcons={setArrIcons} arrIcons={arrIcons} />
                     </ul>
                 </content>
                 <div className="espaço"></div>
-                <footer className="bottom">
-                    <h3>{arr.length}/8 Concluídos</h3>
-                    <div>
-                        {arr}
-                    </div>
-                </footer>
+                {
+                    resultWin === 'Win' ? <Win /> : ''
+                }
+                {
+                    resultFail === 'Fail' ? <Fail /> : ''
+                }
+                <Footer arrIcons={arrIcons} setResultWin={setResultWin} setResultFail={setResultFail} />
             </div> 
         </>  
     );

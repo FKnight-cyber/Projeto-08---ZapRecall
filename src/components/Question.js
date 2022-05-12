@@ -1,6 +1,7 @@
 import setinha from "../assets/images/setinha.png";
+import React from "react";
 
-export default function Question({id, question, answer}){
+export default function Question({index, question, answer, setArrIcons, arrIcons}){
 
     const [pergunta, setPergunta] = React.useState('pergunta');
     const [questionBox, setQuestionBox] = React.useState('caixa-de-resposta hidden');
@@ -11,8 +12,9 @@ export default function Question({id, question, answer}){
 
     return(
         <li >
-            <button disabled={disable} className={pergunta} onClick={() => {setPergunta('pergunta hidden');setQuestionBox('caixa-de-resposta')}}>
-                <h2>Pergunta {id}</h2>
+            <button disabled={disable} className={pergunta} onClick={() => {setPergunta('pergunta hidden');
+            setQuestionBox('caixa-de-resposta selecionado')}}>
+                <h2>Pergunta {index}</h2>
                 <ion-icon className={iconColor} name={icon}></ion-icon>
             </button>
             <div className={questionBox}>
@@ -24,15 +26,15 @@ export default function Question({id, question, answer}){
                 <h3>{answer}</h3>
                 <div className="opcoes">
                      <div className="op1" onClick={()=>{setPergunta('pergunta errado');setAnswerBox('caixa-de-resposta hidden')
-                        ;setIcon('close-circle');setIconColor('errado');setDisable(true)}}>
+                        ;setIcon('close-circle');setIconColor('errado');setArrIcons([...arrIcons, <ion-icon class='errado' name='close-circle'></ion-icon>] );setDisable(true)}}>
                         <h4>Não lembrei</h4>
                     </div>
                     <div className="op2" onClick={()=>{setPergunta('pergunta quase');setAnswerBox('caixa-de-resposta hidden');
-                    setIcon('help-circle');setIconColor('quase');setDisable(true)}}>
+                    setIcon('help-circle');setIconColor('quase');setArrIcons([...arrIcons, <ion-icon class='quase' name='help-circle'></ion-icon>] );setDisable(true)}}>
                         <h4>Quase não lembrei</h4>
                     </div>
                     <div className="op3" onClick={()=>{setPergunta('pergunta certo');setAnswerBox('caixa-de-resposta hidden');
-                    setIcon('checkmark-circle');setIconColor('certo');setDisable(true)}}>
+                    setIcon('checkmark-circle');setIconColor('certo');setArrIcons([...arrIcons, <ion-icon class='certo' name='checkmark-circle'></ion-icon>] );setDisable(true)}}>
                         <h4>Zap!</h4>
                     </div>
                 </div>
