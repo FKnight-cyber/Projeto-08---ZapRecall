@@ -37,8 +37,12 @@ export default function Questions({setArrIcons,arrIcons}){
         }
     ]
 
+    if(arrIcons.length === 0){
+        perguntas.sort(embaralhar);
+    }
+    
     return(
-            perguntas.sort(embaralhar).map((a,index) => <Question index={perguntas.indexOf(a)+1} key={index} id={a.id} question={a.question}
+            perguntas.map((a,index) => <Question index={perguntas.indexOf(a)+1} key={index} id={a.id} question={a.question}
             answer={a.answer} setArrIcons={setArrIcons} arrIcons={arrIcons} />)     
     );
 }
