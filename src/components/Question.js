@@ -25,16 +25,16 @@ export default function Question({index, question, answer, setArrIcons, arrIcons
             <div className={answerBox}>
                 <h3>{answer}</h3>
                 <div className="opcoes">
-                     <div className="op1" onClick={()=>{setPergunta('pergunta errado');setAnswerBox('caixa-de-resposta hidden')
-                        ;setIcon('close-circle');setIconColor('errado');setArrIcons([...arrIcons, <ion-icon class='errado' name='close-circle'></ion-icon>] );setDisable(true)}}>
+                     <div className="op1" onClick={()=>{setArrIcons([...arrIcons, <ion-icon class='errado' name='close-circle'></ion-icon>] );setPergunta('pergunta errado');setAnswerBox('caixa-de-resposta hidden')
+                        ;setIcon('close-circle');setIconColor('errado');setDisable(true)}}>
                         <h4>Não lembrei</h4>
                     </div>
-                    <div className="op2" onClick={()=>{setPergunta('pergunta quase');setAnswerBox('caixa-de-resposta hidden');
-                    setIcon('help-circle');setIconColor('quase');setArrIcons([...arrIcons, <ion-icon class='quase' name='help-circle'></ion-icon>] );setDisable(true)}}>
+                    <div className="op2" onClick={()=>{setArrIcons([...arrIcons, <ion-icon class='quase' name='help-circle'></ion-icon>] );setPergunta('pergunta quase');setAnswerBox('caixa-de-resposta hidden');
+                    setIcon('help-circle');setIconColor('quase');setDisable(true)}}>
                         <h4>Quase não lembrei</h4>
                     </div>
-                    <div className="op3" onClick={()=>{setPergunta('pergunta certo');setAnswerBox('caixa-de-resposta hidden');
-                    setIcon('checkmark-circle');setIconColor('certo');setArrIcons([...arrIcons, <ion-icon class='certo' name='checkmark-circle'></ion-icon>] );setDisable(true)}}>
+                    <div className="op3" onClick={()=>{setArrIcons([...arrIcons, <ion-icon class='certo' name='checkmark-circle'></ion-icon>]);setPergunta('pergunta certo');setAnswerBox('caixa-de-resposta hidden');
+                    setIcon('checkmark-circle');setIconColor('certo');setDisable(true)}}>
                         <h4>Zap!</h4>
                     </div>
                 </div>
