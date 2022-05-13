@@ -1,6 +1,9 @@
 import React from 'react';
+import Recall from './Recall';
+import Win from './Win';
+import Fail from './Fail';
 
-export default function Footer({arrIcons, setResultWin,setResultFail}){
+export default function Footer({arrIcons, setResultWin,setResultFail,resultWin,resultFail}){
     
     if(arrIcons.length === 8 ){
         const checkArr = arrIcons.map(a => a.props.name);
@@ -15,13 +18,26 @@ export default function Footer({arrIcons, setResultWin,setResultFail}){
 
     return(
         <>   
+            {
+                arrIcons.length === 8 ? <div className="espaço2"></div> : ''
+            }
             <footer className="bottom">
-                <h3>{arrIcons.length}/8 Concluídos</h3>
-                <div>
-                    {arrIcons}
+                {
+                    resultWin === 'Win' ? <Win /> : ''
+                }
+                {
+                    resultFail === 'Fail' ? <Fail /> : ''
+                }
+                <div className='progresso'>
+                    <h3>{arrIcons.length}/8 Concluídos</h3>
+                    <div>
+                        {arrIcons}
+                    </div>
                 </div>
-                <button className='recall'>REINICIAR RECALL</button>
-            </footer>
+                    {
+                        arrIcons.length === 8 ? <Recall /> : ''
+                    }
+            </footer> 
         </>
     );
 }

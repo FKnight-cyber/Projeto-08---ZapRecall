@@ -28,13 +28,8 @@ export default function App(){
                     </ul>
                 </content>
                 <div className="espaço"></div>
-                {
-                    resultWin === 'Win' ? <Win /> : ''
-                }
-                {
-                    resultFail === 'Fail' ? <Fail /> : ''
-                }
-                <Footer arrIcons={arrIcons} setResultWin={setResultWin} setResultFail={setResultFail} />
+                
+                <Footer arrIcons={arrIcons} resultWin={resultWin} resultFail={resultFail} setResultWin={setResultWin} setResultFail={setResultFail} />
             </div> 
         </>  
     );
