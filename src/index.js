@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import logo2 from "./assets/images/logo-pequeno.png"
 import Win from "./components/Win";
 import Fail from "./components/Fail";
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
 
 
 function App(){

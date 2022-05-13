@@ -3,6 +3,7 @@ export default function Win(){
     
     return(
         <>
+            <div className="espaço2"></div>
             <div className="resultado">
                 <div className="resultTop">
                     <img alt="" src={party}></img>
