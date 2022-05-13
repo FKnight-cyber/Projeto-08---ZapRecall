@@ -20,6 +20,7 @@ export default function Footer({arrIcons, setResultWin,setResultFail}){
                 <div>
                     {arrIcons}
                 </div>
+                <button className='recall'>REINICIAR RECALL</button>
             </footer>
         </>
     );

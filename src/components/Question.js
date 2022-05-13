@@ -23,7 +23,7 @@ export default function Question({index, question, answer, setArrIcons, arrIcons
                     onClick={() => {setQuestionBox('caixa-de-resposta hidden');setAnswerBox('caixa-de-resposta')}}></img>
             </div>
             <div className={answerBox}>
-                <h3>{answer}</h3>
+                <div className="resposta"><h3>{answer}</h3></div>
                 <div className="opcoes">
                      <div className="op1" onClick={()=>{setArrIcons([...arrIcons, <ion-icon class='errado' name='close-circle'></ion-icon>] );setPergunta('pergunta errado');setAnswerBox('caixa-de-resposta hidden')
                         ;setIcon('close-circle');setIconColor('errado');setDisable(true)}}>
