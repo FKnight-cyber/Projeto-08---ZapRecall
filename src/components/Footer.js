@@ -3,8 +3,15 @@ import Recall from './Recall';
 import Win from './Win';
 import Fail from './Fail';
 
-export default function Footer({arrIcons, setResultWin,setResultFail,resultWin,resultFail,
-setDisplay2,setStart, setArrIcons}){
+export default function Footer({footerMethods,recallZap}){
+
+    const {
+        arrIcons,
+        resultWin,
+        resultFail,
+        setResultWin,
+        setResultFail
+    } = footerMethods
     
     if(arrIcons.length === 8 ){
         const checkArr = arrIcons.map(a => a.props.name);
@@ -36,8 +43,7 @@ setDisplay2,setStart, setArrIcons}){
                     </div>
                 </div>
                     {
-                        arrIcons.length === 8 ? <Recall setArrIcons={setArrIcons} setResultWin={setResultWin}
-                        setResultFail={setResultFail} setDisplay2={setDisplay2} setStart={setStart} /> : ''
+                        arrIcons.length === 8 ? <Recall recallZap={recallZap} /> : ''
                     }
             </footer> 
         </>

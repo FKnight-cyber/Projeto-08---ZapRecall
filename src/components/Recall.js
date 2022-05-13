@@ -1,13 +1,11 @@
 import React from 'react';
 
-export default function Recall({setArrIcons,setResultFail,setResultWin,setDisplay2,setStart,
-setPergunta}){
+export default function Recall({recallZap}){
     return(
         <>
             <div className='recallButton'>
                 {
-                    <button onClick={()=> {setArrIcons([]);setResultFail('');setResultWin('');
-                    setDisplay2('hidden');setStart('login');setPergunta('pergunta')}} 
+                    <button onClick={()=> {recallZap()}} 
                     className='recall'>REINICIAR RECALL</button>
                 }
             </div>

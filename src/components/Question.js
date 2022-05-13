@@ -1,24 +1,27 @@
 import setinha from "../assets/images/setinha.png";
 import React from "react";
 
-export default function Question({index, question, answer, setArrIcons, arrIcons,perguntass,setPerguntass}){
+export default function Question({index, question, answer, setArrIcons, arrIcons}){
 
-    const {
-        pergunta,
-        setPergunta,
-        questionBox,
-        setQuestionBox,
-        answerBox,
-        setAnswerBox,
-        icon,
-        setIcon,
-        iconColor,
-        setIconColor,
-        disable,
-        setDisable
-        } = perguntass
+    const [pergunta, setPergunta] = React.useState('pergunta');
+    const [questionBox, setQuestionBox] = React.useState('caixa-de-resposta hidden');
+    const [answerBox, setAnswerBox] = React.useState('caixa-de-resposta hidden');
+    const [icon,setIcon] = React.useState('play-outline');
+    const [iconColor,setIconColor] = React.useState(' ');
+    const [disable,setDisable] = React.useState(false);
 
-        console.log(perguntass)
+    function recallZape(){
+        setPergunta('pergunta');
+        setQuestionBox('caixa-de-resposta hidden');
+        setAnswerBox('caixa-de-resposta hidden');
+        setIcon('play-outline');
+        setIconColor(' ');
+        setDisable(false);
+    }
+
+    if(arrIcons.length === 8){
+        recallZape();
+    }
 
     return(
         <li >
