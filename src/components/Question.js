@@ -19,10 +19,6 @@ export default function Question({index, question, answer, setArrIcons, arrIcons
         setDisable(false);
     }
 
-    if(arrIcons.length === 8){
-        recallZape();
-    }
-
     return(
         <li >
             <button disabled={disable} className={pergunta} onClick={() => {setPergunta('pergunta hidden');
