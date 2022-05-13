@@ -40,10 +40,12 @@ const deck =
     const perguntas = [...deck];
     perguntas.sort(embaralhar);
 
-export default function Questions({setArrIcons,arrIcons}){
+export default function Questions({setArrIcons,arrIcons,perguntass,setPerguntass}){
     return(
-            perguntas.map((a,index) => <Question index={perguntas.indexOf(a)+1} key={index} id={a.id} question={a.question}
-            answer={a.answer} setArrIcons={setArrIcons} arrIcons={arrIcons} />)     
+            perguntas.map((a,index) => <Question index={perguntas.indexOf(a)+1} 
+            key={index} id={a.id} question={a.question}
+            answer={a.answer} setArrIcons={setArrIcons} 
+            arrIcons={arrIcons} perguntass={perguntass} setPerguntass={setPerguntass} />)     
     );
 }
 
