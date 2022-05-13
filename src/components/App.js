@@ -10,7 +10,8 @@ export default function App(){
     const [display2,setDisplay2] = React.useState('hidden');
     const [arrIcons,setArrIcons] = React.useState([]);
     const [resultWin,setResultWin] = React.useState('');
-    const [resultFail,setResultFail] = React.useState('')
+    const [resultFail,setResultFail] = React.useState('');
+    const [myQuestions,setMyQuestions] = React.useState([]);
 
     function recallZap(){
         setStart('login');
@@ -20,12 +21,20 @@ export default function App(){
         setResultFail('');
     }
 
+    const questionMethods = {
+        setArrIcons,
+        arrIcons,
+        myQuestions,
+        setMyQuestions
+    }
+
     const footerMethods ={
         arrIcons,
         resultWin,
         resultFail,
         setResultWin,
-        setResultFail
+        setResultFail,
+        myQuestions
     }
     
     return(
@@ -39,7 +48,7 @@ export default function App(){
 
                 <content>
                     <ul>
-                        <Questions setArrIcons={setArrIcons} arrIcons={arrIcons} />
+                        <Questions questionMethods={questionMethods} />
                     </ul>
                 </content>
                 <div className="espaço"></div>

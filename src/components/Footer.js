@@ -10,7 +10,8 @@ export default function Footer({footerMethods,recallZap}){
         resultWin,
         resultFail,
         setResultWin,
-        setResultFail
+        setResultFail,
+        myQuestions
     } = footerMethods
     
     if(arrIcons.length === 8 ){
@@ -43,7 +44,8 @@ export default function Footer({footerMethods,recallZap}){
                     </div>
                 </div>
                     {
-                        arrIcons.length === 8 ? <Recall recallZap={recallZap} /> : ''
+                        arrIcons.length === 8 ? <Recall recallZap={recallZap}
+                        myQuestions={myQuestions} /> : ''
                     }
             </footer> 
         </>

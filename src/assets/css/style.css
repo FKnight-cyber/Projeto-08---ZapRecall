@@ -84,7 +84,7 @@ h3{
 
 .login > button{
     font-size: 18px;
-    margin-top: 10%;
+    margin-top: 18px;
     width: 246px;
     height: 54px;
     background-color: #ffffff;
@@ -250,6 +250,15 @@ footer{
 
 .espaço2{
     height: 76px;
+}
+
+input{
+    color: #FB6B6B;
+    border: none;
+    border-radius: 5px;
+    margin-top: 36px;
+    width: 246px;
+    height: 40px;
 }
 
 @media only screen and (min-width: 768px){

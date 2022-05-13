@@ -1,7 +1,8 @@
 import setinha from "../assets/images/setinha.png";
 import React from "react";
 
-export default function Question({index, question, answer, setArrIcons, arrIcons}){
+export default function Question({index, question, answer, setArrIcons, 
+    arrIcons, myQuestions, setMyQuestions}){
 
     const [pergunta, setPergunta] = React.useState('pergunta');
     const [questionBox, setQuestionBox] = React.useState('caixa-de-resposta hidden');
@@ -10,19 +11,21 @@ export default function Question({index, question, answer, setArrIcons, arrIcons
     const [iconColor,setIconColor] = React.useState(' ');
     const [disable,setDisable] = React.useState(false);
 
-    function recallZape(){
-        setPergunta('pergunta');
-        setQuestionBox('caixa-de-resposta hidden');
-        setAnswerBox('caixa-de-resposta hidden');
-        setIcon('play-outline');
-        setIconColor(' ');
-        setDisable(false);
+    function saveState(){
+        setMyQuestions([...myQuestions, {
+            setPergunta,
+            setQuestionBox,
+            setAnswerBox,
+            setIcon,
+            setIconColor,
+            setDisable
+        }])
     }
 
     return(
         <li >
             <button disabled={disable} className={pergunta} onClick={() => {setPergunta('pergunta hidden');
-            setQuestionBox('caixa-de-resposta selecionado')}}>
+            setQuestionBox('caixa-de-resposta selecionado');saveState()}}>
                 <h2>Pergunta {index}</h2>
                 <ion-icon className={iconColor} name={icon}></ion-icon>
             </button>
