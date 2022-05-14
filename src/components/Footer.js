@@ -2,6 +2,7 @@ import React from 'react';
 import Recall from './Recall';
 import Win from './Win';
 import Fail from './Fail';
+import WinTotal from './WinTotal';
 
 export default function Footer({footerMethods,recallZap}){
 
@@ -18,11 +19,20 @@ export default function Footer({footerMethods,recallZap}){
     
     if(arrIcons.length === 8 ){
         const checkArr = arrIcons.map(a => a.props.name);
-        const correctAnswers = countItem(checkArr,'checkmark-circle')
+        const correctAnswers = countItem(checkArr,'checkmark-circle');
+        const semiAnswers = countItem(checkArr,'help-circle');
+
+        let sum = correctAnswers + semiAnswers;
+
         if(correctAnswers < input){
             setResultWin('')
             setResultFail('Fail')
-        }else{
+        }
+        if(correctAnswers >= input && sum === 8){
+            setResultWin('WinTotal')
+            setResultFail('')
+        }
+        if(correctAnswers >= input && sum !== 8){
             setResultWin('Win')
             setResultFail('')
         }
@@ -34,6 +44,9 @@ export default function Footer({footerMethods,recallZap}){
                 arrIcons.length === 8 ? <div className="espaço2"></div> : ''
             }
             <footer className="bottom">
+                {
+                    resultWin === 'WinTotal' ? <WinTotal /> : ''
+                }
                 {
                     resultWin === 'Win' ? <Win /> : ''
                 }
