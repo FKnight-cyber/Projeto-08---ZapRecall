@@ -110,7 +110,7 @@ const decks =
         ],
         zeno:[
             {
-                question: 'Quem é o tutor mais humilde?',
+                question: 'Quem é o mais humilde?',
                 answer: 'Zeno'
             },
             {

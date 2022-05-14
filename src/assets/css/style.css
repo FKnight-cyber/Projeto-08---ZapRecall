@@ -127,6 +127,7 @@ h3{
 }
 
 .caixa-de-resposta{
+    word-wrap: break-word;
     position: relative;
     padding: 18px;
     width: 299px;
@@ -135,6 +136,7 @@ h3{
 }
 
 .resposta{
+    word-wrap: break-word;
     height: 64px;
     font-size: 16px;
     overflow-y: scroll;
@@ -290,6 +292,18 @@ select{
 @media only screen and (min-width: 768px){
     .login{
         margin-top: 100px;
+    }
+
+    input,select{
+        font-size: 18px;
+        width: 500px;
+        height: 50px;
+    }
+
+    button.loginbutton{
+        font-size: 24px;
+        width: 500px;
+        height: 70px;
     }
 
     header{
