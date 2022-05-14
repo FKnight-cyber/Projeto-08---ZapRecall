@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Recall({recallZap,myQuestions}){
+export default function Recall({recallZap,myQuestions,setInput}){
 
     function resetQuestions(){
         myQuestions.map(e => {
@@ -11,6 +11,7 @@ export default function Recall({recallZap,myQuestions}){
             e.setIconColor(' ');
             e.setDisable(false);
         })
+        setInput('');
     }
 
     return(

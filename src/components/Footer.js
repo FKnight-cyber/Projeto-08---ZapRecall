@@ -11,12 +11,15 @@ export default function Footer({footerMethods,recallZap}){
         resultFail,
         setResultWin,
         setResultFail,
-        myQuestions
+        myQuestions,
+        setInput,
+        input
     } = footerMethods
     
     if(arrIcons.length === 8 ){
         const checkArr = arrIcons.map(a => a.props.name);
-        if(checkArr.includes('close-circle')){
+        const correctAnswers = countItem(checkArr,'checkmark-circle')
+        if(correctAnswers < input){
             setResultWin('')
             setResultFail('Fail')
         }else{
@@ -45,9 +48,13 @@ export default function Footer({footerMethods,recallZap}){
                 </div>
                     {
                         arrIcons.length === 8 ? <Recall recallZap={recallZap}
-                        myQuestions={myQuestions} /> : ''
+                        myQuestions={myQuestions} setInput={setInput} /> : ''
                     }
             </footer> 
         </>
     );
+}
+
+function countItem(array, e){
+    return array.filter(a => a === e).length
 }

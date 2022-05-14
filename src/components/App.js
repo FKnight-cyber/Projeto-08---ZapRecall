@@ -12,6 +12,8 @@ export default function App(){
     const [resultWin,setResultWin] = React.useState('');
     const [resultFail,setResultFail] = React.useState('');
     const [myQuestions,setMyQuestions] = React.useState([]);
+    const [input,setInput] = React.useState('');
+    const [disableLogin,setDisableLogin] = React.useState(true);
 
     function recallZap(){
         setStart('login');
@@ -34,12 +36,24 @@ export default function App(){
         resultFail,
         setResultWin,
         setResultFail,
-        myQuestions
+        myQuestions,
+        setInput,
+        input
+    }
+
+    const loginMethods = {
+        start,
+        setStart,
+        setDisplay2,
+        input,
+        setInput,
+        disableLogin,
+        setDisableLogin
     }
     
     return(
         <>
-            <Login start={start} setStart={setStart} setDisplay2={setDisplay2} />
+            <Login loginMethods={loginMethods} />
             <div className={display2}>
                 <header >
                     <img src={logo2} alt=""></img>

@@ -39,6 +39,17 @@ li{
     background-color: #ffffff;
 }
 
+:disabled.loginbutton{
+    color: #C0C0C0;
+    justify-content: center;
+    background-color: #E8E8E8;
+}
+
+button.loginbutton{
+    border-radius: 5px;
+    border: none;
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -259,6 +270,11 @@ input{
     margin-top: 36px;
     width: 246px;
     height: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 @media only screen and (min-width: 768px){
