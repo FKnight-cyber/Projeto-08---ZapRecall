@@ -9,7 +9,7 @@ export default function Win(){
                     <h2>Parabéns!</h2>
                 </div>
                 <div className="resultBottom">
-                    <h4>Você não esqueceu de nenhum flashcard!</h4>
+                    <h4>Você atingiu sua meta!</h4>
                 </div>
             </div>
         </>
