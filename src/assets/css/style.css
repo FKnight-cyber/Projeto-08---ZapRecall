@@ -127,6 +127,7 @@ h3{
 }
 
 .caixa-de-resposta{
+    overflow-y: scroll;
     word-wrap: break-word;
     position: relative;
     padding: 18px;
@@ -323,6 +324,7 @@ select{
         flex-direction: column;
         width: 540px;
         height: 200px;
+        overflow-y: scroll;
     }
 
     .resposta{

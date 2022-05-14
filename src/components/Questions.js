@@ -201,6 +201,10 @@ export default function Questions({questionMethods}){
         perguntas = decks.java;
     }
 
+    if(check === ''){
+        perguntas = decks.java;
+    }
+
     if(check === 'css'){
         perguntas = decks.css;
     }
