@@ -114,32 +114,32 @@ const decks =
                 answer: 'Zeno'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'No meio da dificuldade encontra-se a oportunidade.',
+                answer: 'Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas, acima de tudo, seja você sempre.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'Pedras no caminho? Eu guardo todas. Um dia vou construir um castelo.',
+                answer: 'É parte da cura o desejo de ser curado.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado.',
+                answer: 'Imagine uma nova história para sua vida e acredite nela.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'O insucesso é apenas uma oportunidade para recomeçar com mais inteligência.',
+                answer: 'Você precisa fazer aquilo que pensa que não é capaz de fazer.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.',
+                answer: 'Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'Os problemas são oportunidades para se mostrar o que sabe.',
+                answer: 'Nossos fracassos, às vezes, são mais frutíferos do que os êxitos.'
             },
             {
-                question: 'Só há uma pergunta, falta criativade.',
-                answer: 'funcionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                question: 'É costume de um tolo, quando erra, queixar-se dos outros. É costume de um sábio queixar-se de si mesmo',
+                answer: 'O verdadeiro heroísmo consiste em persistir por mais um momento, quando tudo parece perdido'
             }
         ],
         lele:[
