@@ -15,6 +15,7 @@ export default function App(){
     const [input,setInput] = React.useState('');
     const [disableLogin,setDisableLogin] = React.useState(true);
     const [selectedDeck,setSelectedDeck] = React.useState('');
+    const [deckLength,setDeckLength] = React.useState([1]);
 
     function recallZap(){
         setStart('login');
@@ -29,7 +30,8 @@ export default function App(){
         arrIcons,
         myQuestions,
         setMyQuestions,
-        selectedDeck
+        selectedDeck,
+        setDeckLength
     }
 
     const footerMethods ={
@@ -40,7 +42,8 @@ export default function App(){
         setResultFail,
         myQuestions,
         setInput,
-        input
+        input,
+        deckLength
     }
 
     const loginMethods = {

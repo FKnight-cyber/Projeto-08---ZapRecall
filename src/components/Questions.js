@@ -175,6 +175,20 @@ const decks =
                 question: 'Compreenda as vantagens de ser um bodybuilder natural',
                 answer: 'Somente creatina e bastante proteína MONSTRO'
             }
+        ],
+        menor:[
+            {
+                question: 'Foque na base muscular',
+                answer: 'É importante dar muita atenção a sua base muscular, pois é o que vai atingir seu corpo inteiro.'
+            },
+            {
+                question: 'Tenha treinos refinados para complementar os resultados',
+                answer: 'Se a ideia do bodybuilding é “construir o corpo”, é importante focar no treino de hipertrofia de uma maneira geral, mas é bom lembrar que você também deve incorporar algumas atividades que trabalhem cada região de forma mais específica.'
+            },
+            {
+                question: 'Concilie com exercícios aeróbicos',
+                answer: 'As atividades aeróbicas devem acontecer de duas a três vezes por semana, pois assim fica mais fácil queimar a gordura extra e conquistar os resultados com mais facilidade.'
+            }
         ]
     }
 
@@ -191,7 +205,8 @@ export default function Questions({questionMethods}){
         arrIcons,
         myQuestions,
         setMyQuestions,
-        selectedDeck
+        selectedDeck,
+        setDeckLength
     } = questionMethods
 
     check = selectedDeck;
@@ -199,24 +214,34 @@ export default function Questions({questionMethods}){
 
     if(check === 'java'){
         perguntas = decks.java;
+        setDeckLength(decks.java);
     }
 
     if(check === ''){
         perguntas = decks.java;
+        setDeckLength(decks.java);
     }
 
     if(check === 'css'){
         perguntas = decks.css;
+        setDeckLength(decks.css);
     }
 
     if(check === 'naruto'){
         perguntas = decks.naruto;
+        setDeckLength(decks.naruto);
     }
     if(check === 'zeno'){
         perguntas = decks.zeno;
+        setDeckLength(decks.java);
     }
     if(check === 'lele'){
         perguntas = decks.lele;
+        setDeckLength(decks.lele);
+    }
+    if(check === 'menor'){
+        perguntas = decks.menor;
+        setDeckLength(decks.menor);
     }
 
     return(

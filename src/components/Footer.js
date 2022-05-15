@@ -14,10 +14,11 @@ export default function Footer({footerMethods,recallZap}){
         setResultFail,
         myQuestions,
         setInput,
-        input
+        input,
+        deckLength
     } = footerMethods
     
-    if(arrIcons.length === 8 ){
+    if(arrIcons.length === deckLength.length ){
         const checkArr = arrIcons.map(a => a.props.name);
         const correctAnswers = countItem(checkArr,'checkmark-circle');
         const semiAnswers = countItem(checkArr,'help-circle');
@@ -28,11 +29,11 @@ export default function Footer({footerMethods,recallZap}){
             setResultWin('')
             setResultFail('Fail')
         }
-        if(correctAnswers >= input && sum === 8){
+        if(correctAnswers >= input && sum === deckLength.length){
             setResultWin('WinTotal')
             setResultFail('')
         }
-        if(correctAnswers >= input && sum !== 8){
+        if(correctAnswers >= input && sum !== deckLength.length){
             setResultWin('Win')
             setResultFail('')
         }
@@ -41,7 +42,7 @@ export default function Footer({footerMethods,recallZap}){
     return(
         <>   
             {
-                arrIcons.length === 8 ? <div className="espaço2"></div> : ''
+                arrIcons.length === deckLength.length && deckLength > 0 ? <div className="espaço2"></div> : ''
             }
             <footer className="bottom">
                 {
@@ -54,13 +55,13 @@ export default function Footer({footerMethods,recallZap}){
                     resultFail === 'Fail' ? <Fail /> : ''
                 }
                 <div className='progresso'>
-                    <h3>{arrIcons.length}/8 Concluídos</h3>
+                    <h3>{arrIcons.length}/{deckLength.length} Concluídos</h3>
                     <div>
                         {arrIcons}
                     </div>
                 </div>
                     {
-                        arrIcons.length === 8 ? <Recall recallZap={recallZap}
+                        arrIcons.length === deckLength.length ? <Recall recallZap={recallZap}
                         myQuestions={myQuestions} setInput={setInput} /> : ''
                     }
             </footer> 

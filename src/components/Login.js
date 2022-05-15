@@ -39,6 +39,7 @@ export default function Login({loginMethods}){
                     <option value='naruto'>Naruto</option>
                     <option value='zeno'>Zeno's knowledge</option>
                     <option value='lele'>Lelê fitness tips</option>
+                    <option value='menor'>Teste deck menor</option>
                 </select>
                 <button disabled={disableLogin} className='loginbutton' 
                 onClick={() => {setStart('login hidden');setDisplay2(' ')}}>Iniciar Recall!</button>
